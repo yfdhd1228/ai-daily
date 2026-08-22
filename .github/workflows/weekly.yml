@@ -1,0 +1,45 @@
+name: AI Weekly Report
+
+on:
+  schedule:
+    - cron: "0 12 * * 0"  # 北京时间 周日 20:00
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-weekly
+  cancel-in-progress: false
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Generate weekly report and push
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          SENDKEY: ${{ secrets.SENDKEY }}
+        run: python scripts/report.py --mode weekly
+
+      - name: Archive report
+        run: |
+          git config user.name "ai-daily-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/
+          if git diff --cached --quiet; then
+            echo "nothing to archive"
+          else
+            git commit -m "report: weekly $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

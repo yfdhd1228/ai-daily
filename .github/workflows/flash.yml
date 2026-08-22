@@ -1,0 +1,45 @@
+name: AI Flash Monitor
+
+on:
+  schedule:
+    - cron: "23 * * * *"  # 每小时(北京时间每小时的 23 分左右, UTC 有延迟)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-flash
+  cancel-in-progress: false
+
+jobs:
+  flash:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Check breaking news
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          SENDKEY: ${{ secrets.SENDKEY }}
+        run: python scripts/report.py --mode flash
+
+      - name: Archive flashes
+        run: |
+          git config user.name "ai-daily-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/
+          if git diff --cached --quiet; then
+            echo "nothing to archive"
+          else
+            git commit -m "flash: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

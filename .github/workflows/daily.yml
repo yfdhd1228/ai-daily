@@ -1,0 +1,64 @@
+name: AI Daily Report
+
+on:
+  schedule:
+    - cron: "0 1 * * *"   # 北京时间 09:00 早报
+    - cron: "0 13 * * *"  # 北京时间 21:00 晚报
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "生成模式"
+        required: true
+        default: morning
+        type: choice
+        options: [morning, evening]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-daily
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Resolve mode
+        id: m
+        run: |
+          if [ -n "${{ inputs.mode }}" ]; then
+            echo "mode=${{ inputs.mode }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 13 * * *" ]; then
+            echo "mode=evening" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=morning" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate report and push
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          SENDKEY: ${{ secrets.SENDKEY }}
+        run: python scripts/report.py --mode "${{ steps.m.outputs.mode }}"
+
+      - name: Archive reports
+        run: |
+          git config user.name "ai-daily-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add reports/
+          if git diff --cached --quiet; then
+            echo "nothing to archive"
+          else
+            git commit -m "report: ${{ steps.m.outputs.mode }} $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
