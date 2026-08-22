@@ -20,14 +20,14 @@
 
 | 仓库 | 今日+ | 总star |
 |---|---|---|
-| [openai/codex](https://github.com/openai/codex) | +4,159 | 112,963 |
-| [mattpocock/skills](https://github.com/mattpocock/skills) | +2,684 | 231,674 |
-| [affaan-m/ECC](https://github.com/affaan-m/ECC) | +428 | 242,108 |
-| [obra/superpowers](https://github.com/obra/superpowers) | +592 | 276,102 |
-| [Wei-Shaw/sub2api](https://github.com/Wei-Shaw/sub2api) | +264 | 38,755 |
-| [makeplane/plane](https://github.com/makeplane/plane) | +263 | 57,160 |
-| [n8n-io/n8n](https://github.com/n8n-io/n8n) | +202 | 201,740 |
-| [anthropics/claude-code](https://github.com/anthropics/claude-code) | +141 | 142,477 |
-| [AprilNEA/OpenLogi](https://github.com/AprilNEA/OpenLogi) | +959 | 13,726 |
-| [modular/modular](https://github.com/modular/modular) | +395 | 28,814 |
+| [openai/codex](https://github.com/openai/codex) | +4,159 | 112,999 |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | +2,684 | 231,703 |
+| [affaan-m/ECC](https://github.com/affaan-m/ECC) | +428 | 242,113 |
+| [obra/superpowers](https://github.com/obra/superpowers) | +592 | 276,110 |
+| [Wei-Shaw/sub2api](https://github.com/Wei-Shaw/sub2api) | +264 | 38,758 |
+| [makeplane/plane](https://github.com/makeplane/plane) | +263 | 57,162 |
+| [n8n-io/n8n](https://github.com/n8n-io/n8n) | +202 | 201,745 |
+| [anthropics/claude-code](https://github.com/anthropics/claude-code) | +141 | 142,481 |
+| [AprilNEA/OpenLogi](https://github.com/AprilNEA/OpenLogi) | +959 | 13,740 |
+| [modular/modular](https://github.com/modular/modular) | +395 | 28,815 |
 
