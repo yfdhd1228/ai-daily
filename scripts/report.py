@@ -36,6 +36,7 @@ except Exception:  # pragma: no cover
 
 ROOT = Path(__file__).resolve().parent.parent
 REPORTS_DIR = ROOT / "reports"
+STATE_DIR = ROOT / "state"
 
 RSS_SOURCES = [
     ("机器之心", "https://www.jiqizhixin.com/rss"),
@@ -280,6 +281,32 @@ def save_report(filename, content):
     return path
 
 
+def load_state():
+    p = STATE_DIR / "trending.json"
+    if p.exists():
+        try:
+            return json.loads(p.read_text(encoding="utf-8"))
+        except Exception as exc:
+            log(f"状态文件损坏, 重建: {exc}")
+    return {}
+
+
+def save_state(st):
+    STATE_DIR.mkdir(exist_ok=True)
+    (STATE_DIR / "trending.json").write_text(
+        json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def _hours_ago(iso_ts):
+    try:
+        t = datetime.fromisoformat(iso_ts)
+        if t.tzinfo is None:
+            t = t.replace(tzinfo=TZ)
+        return (now_bj() - t).total_seconds() / 3600
+    except Exception:
+        return 99.0
+
+
 # ---------------------------------------------------------------- 各模式 --
 
 NEWS_SYSTEM = (
@@ -333,24 +360,61 @@ def _delta_num(delta):
 
 
 def run_flash():
+    """每小时监测: 与上次快照对比计算真实小时增速; 同一项目/新闻24小时内只评估一次"""
     bj = now_bj()
-    news = fetch_rss(hours=1.5, per_feed=8)
+    state = load_state()
+    prev_repos = state.get("repos", {})
+    pushed = {k: v for k, v in state.get("pushed", {}).items() if _hours_ago(v) < 24}
+
+    news = [n for n in fetch_rss(hours=1.5, per_feed=8)
+            if f"news:{n['title'][:40]}" not in pushed]
     trending = fetch_trending("daily", limit=25)
-    viral = [t for t in trending
-             if (_delta_num(t["delta"]) >= 800 and t["total"] <= 30000)
-             or _delta_num(t["delta"]) >= 2500]
+    cur = {t["repo"]: t for t in trending}
+
+    # Trending 的 "N stars today" 是当日累计值, 不能直接当增速;
+    # 用总star差值(单调递增)对比上次快照, 得到近1小时真实增速
+    viral = []
+    for repo, t in cur.items():
+        if repo in pushed:
+            continue
+        p = prev_repos.get(repo)
+        if p:
+            v_total = t["total"] - p.get("total", 0)
+            v_today = _delta_num(t["delta"]) - p.get("today", 0)
+            velocity = v_total if v_total > 0 else max(v_today, 0)
+        else:
+            velocity = 0  # 首次上榜无基准, 不判爆火, 只记快照
+        if (velocity >= 300 and t["total"] <= 50000) or velocity >= 800:
+            viral.append({**t, "velocity_1h": velocity})
+    if viral:
+        log(f"快速上升: {[(v['repo'], v['velocity_1h']) for v in viral]}")
+
+    # 更新快照供下次对比
+    state["repos"] = {repo: {"total": t["total"], "today": _delta_num(t["delta"]),
+                             "ts": bj.isoformat(timespec="seconds")}
+                      for repo, t in cur.items()}
+    state["pushed"] = pushed
+    state["last_run"] = bj.isoformat(timespec="seconds")
+    save_state(state)
 
     if not news and not viral:
-        log("近1.5小时无新素材, 跳过")
+        log("近1.5小时无新素材且无快速上升项目, 跳过")
         return 0
 
     system = ("你是AI领域快讯判断器。判断素材中是否存在'引发较大关注的重磅消息':"
-              "重大模型发布/重大融资并购/重大政策监管/重大安全事故/短时间爆火的开源项目。"
+              "重大模型发布/重大融资并购/重大政策监管/重大安全事故/短时间内star快速上升的开源项目"
+              "(注意velocity_1h是近1小时新增star, 只有大几十上百才值得关注, 当日累计值不代表当前热度)。"
               "普通产品更新、常规报道都不算。只输出JSON:"
               '{"push":true/false,"title":"快讯标题(30字内)","content":"Markdown正文,每条一行加粗标题+一句话摘要+来源链接"}')
     user = ("候选新闻: " + json.dumps(news[:20], ensure_ascii=False)[:8000]
-            + "\nGitHub疑似爆火: " + json.dumps(viral, ensure_ascii=False)[:3000])
+            + "\nGitHub快速上升项目: " + json.dumps(viral, ensure_ascii=False)[:3000])
     resp = llm_chat(system, user, max_tokens=3000)
+
+    # 候选已评估过, 24小时内不再重复评估(无论是否推送), 防止同一热点反复打扰
+    for k in [f"news:{n['title'][:40]}" for n in news[:20]] + [v["repo"] for v in viral]:
+        pushed[k] = bj.isoformat(timespec="seconds")
+    state["pushed"] = pushed
+    save_state(state)
 
     if resp:
         try:
@@ -365,10 +429,10 @@ def run_flash():
         except Exception as exc:
             log(f"解析LLM快讯失败: {exc}")
 
-    if viral:  # LLM 不可用时, 爆火项目仍按阈值推送
-        lines = [f"- **{v['repo']}** 今日 +{v['delta']} star (总 {v['total']:,}) "
+    if viral:  # LLM 不可用时, 快速上升项目仍按阈值推送
+        lines = [f"- **{v['repo']}** 近1小时 +{v['velocity_1h']} star (总 {v['total']:,}, 今日 +{v['delta']}) "
                  f"[链接](https://github.com/{v['repo']})" for v in viral[:5]]
-        body = "## ⚡ GitHub 爆火项目\n" + "\n".join(lines)
+        body = "## ⚡ GitHub 快速上升项目(近1小时)\n" + "\n".join(lines)
         save_report(f"flash-{bj:%Y-%m-%d-%H%M}.md", body)
         push("⚡ AI/GitHub 重大快讯", body)
         return 0
