@@ -52,6 +52,9 @@ ALLOWED_HOSTS = {
 }
 # Server酱推送主机白名单 (数字子域 = Server酱³, sctapi = Turbo)
 PUSH_HOST_RE = r"(\d{1,8}\.push\.ft07\.com|sctapi\.ftqq\.com)"
+# LLM API 主机白名单 (OpenAI 兼容服务商; 新增服务商在此追加)
+LLM_ALLOWED_HOST_RE = (r"(api\.deepseek\.com|open\.bigmodel\.cn|api\.openai\.com|"
+                       r"dashscope\.aliyuncs\.com|api\.moonshot\.cn|openrouter\.ai)")
 LLM_DEFAULT_BASE = "https://open.bigmodel.cn/api/paas/v4"
 
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 ai-daily-bot/1.0"}
@@ -208,12 +211,16 @@ def fetch_trending(since="daily", limit=20):
 
 # ---------------------------------------------------------------- LLM --
 
-def llm_chat(system, user, max_tokens=3500):
+def llm_chat(system, user, max_tokens=8000):
     key = os.environ.get("LLM_API_KEY", "").strip()
     if not key:
         return None
     base = os.environ.get("LLM_BASE_URL", "").strip() or LLM_DEFAULT_BASE
     model = os.environ.get("LLM_MODEL", "").strip() or "glm-4-flash"
+    url = f"{base.rstrip('/')}/chat/completions"
+    if not re.fullmatch(LLM_ALLOWED_HOST_RE, urlparse(url).hostname or ""):
+        log(f"LLM_BASE_URL 主机不在允许列表: {urlparse(url).hostname}")
+        return None
     payload = {
         "model": model,
         "messages": [{"role": "system", "content": system},
@@ -223,8 +230,7 @@ def llm_chat(system, user, max_tokens=3500):
     }
     for attempt in range(3):
         try:
-            r = safe_post(f"{base.rstrip('/')}/chat/completions", timeout=120,
-                          allow_custom_host=True,
+            r = safe_post(url, timeout=120, allow_host_regex=LLM_ALLOWED_HOST_RE,
                           headers={"Authorization": f"Bearer {key}"}, json=payload)
             if r.status_code == 200:
                 text = r.json()["choices"][0]["message"]["content"].strip()
@@ -344,7 +350,7 @@ def run_flash():
               '{"push":true/false,"title":"快讯标题(30字内)","content":"Markdown正文,每条一行加粗标题+一句话摘要+来源链接"}')
     user = ("候选新闻: " + json.dumps(news[:20], ensure_ascii=False)[:8000]
             + "\nGitHub疑似爆火: " + json.dumps(viral, ensure_ascii=False)[:3000])
-    resp = llm_chat(system, user, max_tokens=1200)
+    resp = llm_chat(system, user, max_tokens=3000)
 
     if resp:
         try:
