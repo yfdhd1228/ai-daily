@@ -1,0 +1,96 @@
+{
+ "repos": {
+  "openai/codex": {
+   "total": 115024,
+   "today": 2729,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "freestylefly/awesome-gpt-image-2": {
+   "total": 12617,
+   "today": 440,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "mattpocock/skills": {
+   "total": 233587,
+   "today": 2448,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "basecamp/omarchy": {
+   "total": 28932,
+   "today": 803,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "AprilNEA/OpenLogi": {
+   "total": 14722,
+   "today": 1008,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "block/buzz": {
+   "total": 30015,
+   "today": 349,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "apache/maka": {
+   "total": 2268,
+   "today": 49,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "Alishahryar1/free-claude-code": {
+   "total": 47810,
+   "today": 1040,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "tinyhumansai/openhuman": {
+   "total": 36635,
+   "today": 106,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "affaan-m/ECC": {
+   "total": 242468,
+   "today": 427,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "ruvnet/ruflo": {
+   "total": 69003,
+   "today": 134,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "VoltAgent/awesome-agent-skills": {
+   "total": 31174,
+   "today": 223,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "virgiliojr94/book-to-skill": {
+   "total": 24521,
+   "today": 423,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "dani-garcia/vaultwarden": {
+   "total": 65924,
+   "today": 95,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "anthropics/claude-plugins-community": {
+   "total": 843,
+   "today": 257,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "ripienaar/free-for-dev": {
+   "total": 134317,
+   "today": 593,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "Comfy-Org/ComfyUI": {
+   "total": 129287,
+   "today": 179,
+   "ts": "2026-08-24T02:52:14+08:00"
+  },
+  "NousResearch/hermes-agent": {
+   "total": 234838,
+   "today": 519,
+   "ts": "2026-08-24T02:52:14+08:00"
+  }
+ },
+ "pushed": {},
+ "last_run": "2026-08-24T02:52:14+08:00"
+}
