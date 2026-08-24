@@ -2,33 +2,36 @@
 
 ## 📰 AI 要闻
 
-1. **英伟达AI服务器将涨价15%** — 1GW数据中心成本预计激增50亿美元，AI基础设施投资压力加大。 [量子位](https://www.qbitai.com/2026/08/478164.html)
-2. **匿名大模型被扒出智谱血缘** — 有传闻Cursor拿开源GLM训练，智谱家族模型再度引发关注。 [量子位](https://www.qbitai.com/2026/08/478191.html)
-3. **GLM-5.3开源权重模型以1/5成本击败Anthropic/OpenAI** — HackerNews实测称性能领先、成本大幅降低，社区讨论热烈。 [HackerNews](https://news.ycombinator.com/item?id=49410097)
-4. **全球首次！机器人迎战网球运动员** — 极限救球、摔倒光速弹起，具身智能运动能力再获突破。 [量子位](https://www.qbitai.com/2026/08/478093.html)
-5. **具身创业里的香港教授们** — 从实验室走向产业，香港高校成为具身智能创业新势力。 [量子位](https://www.qbitai.com/2026/08/478289.html)
-6. **首个个人机器人开启预订** — 上纬新材拉开家庭机器人消费时代序幕。 [量子位](https://www.qbitai.com/2026/08/478017.html)
-7. **训练AI模型使用版权书籍是否合法？** — 法律界仍在争论，后续监管与判例值得关注。 [TechCrunch AI](https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/)
-8. **他给了王兴兴第一个200万** — 投资人已为下一个「宇树」出任董事长，具身赛道资本涌动。 [量子位](https://www.qbitai.com/2026/08/478234.html)
+- **前保安杀进AI决赛** — 草根与高中生同台竞技，这场AI比赛冠军奖金25万。[量子位](https://www.qbitai.com/2026/08/478358.html)
+- **WRC唯一真「人机共生」展台** — 沉浸式机器人咖啡店亮相世界机器人大会，展现人机协作新场景。[量子位](https://www.qbitai.com/2026/08/478319.html)
+- **具身创业里的香港教授们** — 港校教授组团投身具身智能创业，产学研结合成新趋势。[量子位](https://www.qbitai.com/2026/08/478289.html)
+- **他给了王兴兴第一个200万** — 早期投资人转向具身智能，如今下注「下一个宇树」。[量子位](https://www.qbitai.com/2026/08/478234.html)
+- **神秘模型Ox Alpha** — TechCrunch调查其背后团队与训练数据来源。[TechCrunch](https://techcrunch.com/2026/08/23/whos-behind-the-new-stealth-model-ox-alpha/)
+- **AI训练版权拉锯** — 用受版权保护的书籍训练AI是否合法，法律界再生争议。[TechCrunch](https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/)
+- **Anthropic最强模型遇冷** — 更便宜的工具分流用户，Claude吸引力不及预期。[HackerNews](https://news.ycombinator.com/item?id=49411102)
+- **agent.md实战** — 用一份agent.md文件提升LLM辅助编码质量的经验分享。[HackerNews](https://news.ycombinator.com/item?id=49410932)
 
 ## 🐙 GitHub 热点
 
 | 仓库 | 今日+star | 总star | 一句话简介 |
-| --- | --- | --- | --- |
-| [openai/codex](https://github.com/openai/codex) | 2,729 | 115,011 | 轻量级终端编码Agent |
-| [mattpocock/skills](https://github.com/mattpocock/skills) | 2,448 | 233,562 | 面向真实工程师的Skills库 |
-| [AprilNEA/OpenLogi](https://github.com/AprilNEA/OpenLogi) | 1,008 | 14,705 | Rust写的高性能本地替代Logitech工具 |
-| [basecamp/omarchy](https://github.com/basecamp/omarchy) | 803 | 28,906 | 美观现代且有个性的Linux发行版 |
-| [block/buzz](https://github.com/block/buzz) | 349 | 30,004 | 蜂巢式群体沟通平台 |
-| [freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2) | 440 | 12,612 | GPT-Image2工业级提示词引擎与模板库 |
-| [apache/maka](https://github.com/apache/maka) | 49 | 2,258 | Apache孵化中的本地优先AI Agent工作区 |
+|------|-----------|--------|------------|
+| [openai/codex](https://github.com/openai/codex) | 2,715 | 115,444 | 轻量级终端编码代理 |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | 2,447 | 233,970 | 真实工程师的Skills集合 |
+| [Alishahryar1/free-claude-code](https://github.com/Alishahryar1/free-claude-code) | 1,081 | 48,027 | 免费使用Claude Code/Codex等代理，1.3B+免费token |
+| [AprilNEA/OpenLogi](https://github.com/AprilNEA/OpenLogi) | 1,009 | 15,022 | Rust写的本地化Logitech Options+替代品 |
+| [basecamp/omarchy](https://github.com/basecamp/omarchy) | 750 | 29,194 | 美观现代的Linux发行版 |
+| [affaan-m/ECC](https://github.com/affaan-m/ECC) | 427 | 242,586 | Agent harness性能优化系统 |
+| [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 417 | 24,714 | 技术书PDF一键转Claude Code技能 |
+| [block/buzz](https://github.com/block/buzz) | 410 | 30,148 | 蜂巢思维通信平台 |
+| [freestylefly/awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2) | 401 | 12,955 | GPT-Image2工业级提示词引擎与模板库 |
+| [anthropics/claude-plugins-community](https://github.com/anthropics/claude-plugins-community) | 225 | 997 | Claude插件社区市场 |
 
-**⭐新星观察** — [anthropics/claude-plugins-community](https://github.com/anthropics/claude-plugins-community)：总star仅837，单日新增257，Claude插件社区生态初现活力。
+⭐**新星观察**：[anthropics/claude-plugins-community](https://github.com/anthropics/claude-plugins-community) 总star仅997，日增225，社区化插件生态正快速生长。
 
-**📈趋势速读** — Codex（+2,729）与Skills（+2,448）领跑，Agent/Skills生态持续爆发；本地优先和实用工具类仓库（OpenLogi、buzz）受开发者追捧，开源社区热度正向生产工具迁移。
+📈**趋势速读**：今日GitHub热点集中在AI agent/skills生态与免费工具链，Claude Code周边项目包揽多数增长，工业级提示词引擎与插件市场是新的发力点。
 
 ## 🔭 明日关注
 
-1. **WRC世界机器人大会后续发酵** — 人机共生展台与具身产品落地讨论有望延续。
-2. **英伟达AI服务器涨价连锁反应** — 数据中心成本重估与算力供需博弈继续升温。
-3. **GLM-5.3开源争议** — 智谱血缘传闻与性价比实测的社区讨论或进一步扩散。
+1. **WRC后续**：沉浸式机器人咖啡店等“人机共生”展台能否成为世界机器人大会落地标杆。
+2. **Ox Alpha**：神秘模型背后的团队身份与训练细节或将持续发酵。
+3. **具身智能融资**：香港教授创业公司及“下一个宇树”投资案的最新进展。
