@@ -1,103 +1,103 @@
 {
  "repos": {
   "Alishahryar1/free-claude-code": {
-   "total": 48733,
+   "total": 48778,
    "today": 889,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "openai/codex": {
-   "total": 116892,
+   "total": 116922,
    "today": 1990,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "MadsLorentzen/ai-job-search": {
-   "total": 33748,
+   "total": 33835,
    "today": 378,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "multica-ai/andrej-karpathy-skills": {
-   "total": 206336,
+   "total": 206369,
    "today": 491,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "makeplane/plane": {
-   "total": 57792,
+   "total": 57814,
    "today": 268,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "NousResearch/hermes-agent": {
-   "total": 235631,
+   "total": 235671,
    "today": 899,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "anthropics/claude-plugins-community": {
-   "total": 1273,
+   "total": 1289,
    "today": 490,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "AprilNEA/OpenLogi": {
-   "total": 15693,
+   "total": 15727,
    "today": 1102,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "apache/maka": {
-   "total": 2794,
+   "total": 2817,
    "today": 408,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "PostHog/posthog": {
-   "total": 38915,
+   "total": 38929,
    "today": 106,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "openclaw/openclaw": {
-   "total": 387368,
+   "total": 387383,
    "today": 160,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "AgriciDaniel/claude-obsidian": {
-   "total": 11701,
+   "total": 11741,
    "today": 272,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "rohitg00/ai-engineering-from-scratch": {
-   "total": 48158,
+   "total": 48185,
    "today": 330,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "basecamp/omarchy": {
-   "total": 29915,
+   "total": 29952,
    "today": 1055,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "tashfeenahmed/freellmapi": {
-   "total": 19684,
+   "total": 19701,
    "today": 153,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "dani-garcia/vaultwarden": {
-   "total": 66089,
+   "total": 66096,
    "today": 176,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "freestylefly/awesome-gpt-image-2": {
-   "total": 15314,
+   "total": 15353,
    "today": 2442,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "VoltAgent/awesome-agent-skills": {
-   "total": 31753,
+   "total": 31779,
    "today": 600,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   },
   "tinyhumansai/openhuman": {
-   "total": 37138,
+   "total": 37166,
    "today": 515,
-   "ts": "2026-08-25T01:51:46+08:00"
+   "ts": "2026-08-25T03:05:57+08:00"
   }
  },
  "pushed": {
   "freestylefly/awesome-gpt-image-2": "2026-08-24T11:27:27+08:00"
  },
- "last_run": "2026-08-25T01:51:46+08:00"
+ "last_run": "2026-08-25T03:05:57+08:00"
 }
