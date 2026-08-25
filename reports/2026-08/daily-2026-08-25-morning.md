@@ -20,14 +20,14 @@
 
 | 仓库 | 今日+ | 总star |
 |---|---|---|
-| [Alishahryar1/free-claude-code](https://github.com/Alishahryar1/free-claude-code) | +891 | 49,103 |
-| [openai/codex](https://github.com/openai/codex) | +1,994 | 117,240 |
-| [MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search) | +434 | 34,170 |
-| [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | +588 | 206,620 |
-| [makeplane/plane](https://github.com/makeplane/plane) | +243 | 57,993 |
-| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | +896 | 235,884 |
-| [anthropics/claude-plugins-community](https://github.com/anthropics/claude-plugins-community) | +489 | 1,400 |
-| [AprilNEA/OpenLogi](https://github.com/AprilNEA/OpenLogi) | +1,097 | 15,949 |
-| [apache/maka](https://github.com/apache/maka) | +411 | 2,964 |
+| [Alishahryar1/free-claude-code](https://github.com/Alishahryar1/free-claude-code) | +891 | 49,108 |
+| [openai/codex](https://github.com/openai/codex) | +1,994 | 117,247 |
+| [MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search) | +434 | 34,180 |
+| [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | +588 | 206,628 |
+| [makeplane/plane](https://github.com/makeplane/plane) | +243 | 57,995 |
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | +896 | 235,889 |
+| [anthropics/claude-plugins-community](https://github.com/anthropics/claude-plugins-community) | +489 | 1,403 |
+| [AprilNEA/OpenLogi](https://github.com/AprilNEA/OpenLogi) | +1,097 | 15,952 |
+| [apache/maka](https://github.com/apache/maka) | +411 | 2,968 |
 | [PostHog/posthog](https://github.com/PostHog/posthog) | +83 | 39,024 |
 
