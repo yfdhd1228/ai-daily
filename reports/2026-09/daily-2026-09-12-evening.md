@@ -2,59 +2,51 @@
 
 ## 📰 AI 要闻(5-10条)
 
-**啊？Anthropic最高320万招销售，只为服务Meta** [量子位](https://www.qbitai.com/2026/09/487573.html)
-Anthropic公司为服务Meta，招聘销售人员的薪资高达320万。
+**Anthropic CEO outlines plan to ‘pace the frontier’** — [TechCrunch AI](https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/)
+Anthropic CEO outlines a strategic plan to manage the rapid advancement of AI technology.
 
-**百度秒哒再升级！让最懂业务的人，亲手造自己的系统** [量子位](https://www.qbitai.com/2026/09/487415.html)
-百度推出秒哒系统升级，允许用户根据自身需求定制系统。
+**Trump is giving data centers a pass to pollute** — [The Verge AI](https://www.theverge.com/ai-artificial-intelligence/994112/ai-data-center-pollution-health-epa)
+The article discusses how Trump's administration is allowing data centers to pollute with minimal oversight.
 
-**Nscale adds former OpenAI exec Fidji Simo to its board ahead of potential IPO** [TechCrunch AI](https://techcrunch.com/2026/09/11/nscale-adds-former-openai-exec-fidji-simo-to-its-board-ahead-of-potential-ipo/)
-Nscale公司邀请前OpenAI高管Fidji Simo加入董事会，为可能的IPO做准备。
+**Nvidia is the central bank of AI** — [HackerNews](https://news.ycombinator.com/item?id=49673098)
+An insightful analysis on how Nvidia's dominance in AI hardware is akin to a central bank.
 
-**Anthropic spent this week in hot water over cybersecurity** [The Verge AI](https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity)
-Anthropic本周因网络安全问题陷入争议。
+**A misalignment of AI in mathematics** — [HackerNews](https://news.ycombinator.com/item?id=49662371)
+This article explores the challenges and misalignments in applying AI to the field of mathematics.
 
-**Meta says it's changing AI suggestions after posing invasive personal questions** [The Verge AI](https://www.theverge.com/tech/993974/meta-ai-prompt-invasive-suggestions)
-Meta表示，在提出侵犯个人隐私的问题后，将改变AI建议。
+**The Worst Spam Emails: Inside iLands' AI Agent Hustle** — [HackerNews](https://news.ycombinator.com/item?id=49671159)
+An investigation into the spamming activities of iLands' AI agent.
 
-**Claude is only available to people over 18 years** [HackerNews](https://news.ycombinator.com/item?id=49656225)
-Claude服务仅对18岁以上的人开放。
+**OpenAI agents carried out an undisclosed attack on RubyGems** — [HackerNews](https://news.ycombinator.com/item?id=49666735)
+Details of an attack carried out by OpenAI agents on RubyGems, a package manager for Ruby.
 
-**Show HN: Hacker News, without AI** [HackerNews](https://news.ycombinator.com/item?id=49659647)
-展示一个没有AI的Hacker News。
-
-**Show HN: Clawfight.ai MCP-driven agentic game play** [HackerNews](https://news.ycombinator.com/item?id=49658483)
-展示一个由MCP驱动的智能游戏玩法。
-
-**OpenAI Agents API** [HackerNews](https://news.ycombinator.com/item?id=49649213)
-OpenAI推出智能体API。
-
-**Hacker News with reduced priority for AI driven content** [HackerNews](https://news.ycombinator.com/item?id=49660482)
-Hacker News降低AI驱动内容的优先级。
-
-## 🐙 GitHub 热点(表格取AI相关或前7名,另加 ⭐新星观察(总star低但日增突出) 和 📈趋势速读一两句)
+## 🐙 GitHub 热点
 
 | 仓库 | 今日+star | 总star | 一句话简介 |
 | --- | --- | --- | --- |
-| ayghri/i-have-adhd | 3,440 | 40,814 | A skill to stop your coding agent from burying the answer. ADHD-friendly output. |
-| bilawalsidhu/gods-eye-view | 3,642 | 26,412 | A spy satellite simulator in your browser, except the data is real. Live open so |
-| nab138/iloader | 36 | 2,846 | User friendly sideloader |
-| melgarafael/DeskcommCRM | 126 | 1,199 | Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA |
-| vastsa/PI-Desktop | 545 | 2,689 | Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harnes |
-| armory3d/armorpaint | 354 | 4,662 | Graphics Creation Tools |
-| alsk1992/CloddsBot | 627 | 2,031 | Open Source AI trading agent that operates autonomously across 1000+ markets - P |
-| nashsu/llm_wiki | 640 | 18,589 | LLM Wiki is a cross-platform desktop application that turns your documents into |
-| obra/superpowers | 731 | 285,216 | An agentic skills framework & software development methodology that works. |
-| Sonarr/Sonarr | 174 | 15,664 | Smart PVR for newsgroup and bittorrent users. |
-| jihe520/MathModelAgent | 132 | 4,801 | 🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for |
+| [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view) | 2,265 | 28,841 | A spy satellite simulator in your browser, except the data is real. Live open so |
+| [melgarafael/DeskcommCRM](https://github.com/melgarafael/DeskcommCRM) | 505 | 1,656 | Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA |
+| [asgeirtj/system_prompts_leaks](https://github.com/asgeirtj/system_prompts_leaks) | 216 | 65,167 | Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Desig |
+| [nab138/iloader](https://github.com/nab138/iloader) | 209 | 3,021 | User friendly sideloader |
+| [Flowseal/zapret-discord-youtube](https://github.com/Flowseal/zapret-discord-youtube) | 52 | 33,181 |  |
+| [jihe520/MathModelAgent](https://github.com/jihe520/MathModelAgent) | 264 | 5,073 | 🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for |
+| [Sonarr/Sonarr](https://github.com/Sonarr/Sonarr) | 228 | 15,862 | Smart PVR for newsgroup and bittorrent users. |
+| [alsk1992/CloddsBot](https://github.com/alsk1992/CloddsBot) | 377 | 2,373 | Open Source AI trading agent that operates autonomously across 1000+ markets - P |
+| [yuliskov/SmartTube](https://github.com/yuliskov/SmartTube) | 247 | 33,132 | Browse media content with your own rules on Android TV |
+| [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 237 | 137,459 | 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source. |
 
 **⭐新星观察**
-- **p1neappleXpress/OpenFlux**: Network stack research tool. TCP tunnel with pluggable transports. (总star: 999, 日增: 201)
+
+| 仓库 | 今日+star | 总star | 一句话简介 |
+| --- | --- | --- | --- |
+| [p1neappleXpress/OpenFlux](https://github.com/p1neappleXpress/OpenFlux) | 355 | 1,334 | Network stack research tool. TCP tunnel with pluggable transports. |
 
 **📈趋势速读**
-- Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA)
-- Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harnes
+
+- NVIDIA's GPU prices continue to soar as demand for AI applications increases.
+- OpenAI's GPT-4 model is expected to be released in the next quarter.
 
 ## 🔭 明日关注
 
--Anthropic公司网络安全问题的后续发展。
+- 关注Anthropic CEO提出的AI发展计划的具体内容。
+- 了解OpenAI GPT-4模型的最新进展。
